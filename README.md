@@ -13,7 +13,7 @@ Este projeto implementa um chatbot utilizando a biblioteca Langchain, que oferec
 Clone o repositório e instale as dependências usando pip:
 
 ```bash
-git clone https://github.com/username/langchain-chatbot.git
+git clone https://github.com/itrapnauskas/langchain-chatbot.git
 cd langchain-chatbot
 pip install -r requirements.txt
 ```
