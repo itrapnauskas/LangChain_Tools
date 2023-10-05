@@ -1,4 +1,4 @@
-from langchain.llms import OpenAI
+arafrom langchain.llms import OpenAI
 from langchain.agents import initialize_agent, Tool
 from langchain.chains.conversation.memory import ConversationBufferMemory
 
@@ -34,7 +34,7 @@ def decrypt(word):
     return decrypted_word
 
 
-#chama ferramentas
+#declara ferramentas
 tools = [
     Tool(
         name = "Fibonnaci",
@@ -60,6 +60,9 @@ tools = [
         description="usar quando você quiser descriptografar uma palavra"
     )
 ]
+
+#para testar as ferramentas, explicite o uso da ferramenta, por exemplo "calcule o fibbonaci no numero 10" ou "criptografe a palavra 'batata'"
+
 
 memory = ConversationBufferMemory(memory_key="chat_history") 
 
