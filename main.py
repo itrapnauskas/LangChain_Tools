@@ -69,15 +69,7 @@ llm=OpenAI(temperature=0, verbose=True)
 #cadeia de atividades
 agent_chain = initialize_agent(tools, llm, agent="conversational-react-description",memory=memory, verbose=True)
 
-'''
-    if "agent_memory" not in st.session_state:
-        st.session_state["agent_memory"] =  ConversationBufferMemory(memory_key="chat_history") # You can use other memory types as well!
-
-llm=OpenAI(temperature=0, verbose=True)
-agent_chain = initialize_agent(tools,  llm, agent="conversational-react-description", memory=st.session_state["agent_memory"], verbose=True) # verbose=True to see the agent's thought process'''
-
-''
-st.header(":blue[Langchain chatbot com agente, ferramentas e memória] :sunglasses:")
+st.header(":blue[Langchain chatbot com agente, ferramentas e memória]")
 user_input = st.text_input("Você: ")
 
 #inicia buffer de memoria
@@ -85,7 +77,7 @@ if "memory" not in st.session_state:
     st.session_state["memory"] = ""
 
 #streamlit botão
-if st.button("Envia"):
+if st.button("Enviar"):
     st.markdown(agent_chain.run(input=user_input))
     #exibe buffer de memoria
     #adiciona histórico de conversas ao buffer de memoria
